@@ -8,9 +8,10 @@ import { cn } from "@/lib/utils";
 interface SidebarProps {
   title: string;
   location: string;
+  onClick?: () => void;
 }
 
-function SidebarTile({ title, location }: SidebarProps) {
+function SidebarTile({ title, location, onClick }: SidebarProps) {
   const pathname = usePathname();
 
   return (
@@ -20,6 +21,7 @@ function SidebarTile({ title, location }: SidebarProps) {
         "pl-[40px] py-[12px] w-full block",
         pathname === location ? "bg-red" : "",
       )}
+      onClick={onClick}
     >
       {title}
     </Link>

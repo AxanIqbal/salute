@@ -68,6 +68,7 @@ function Sidebar() {
               key={e.location}
               title={e.title}
               location={e.location}
+              onClick={() => setIsNav(false)}
             />
           ))}
           <p
