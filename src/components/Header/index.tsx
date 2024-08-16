@@ -11,9 +11,14 @@ interface IHeader {
 
 function Header({ role, className }: IHeader) {
   return (
-    <div className={cn("flex justify-between w-full items-start", className)}>
+    <div
+      className={cn(
+        "flex flex-col-reverse md:flex-row justify-between w-full items-start gap-[8px]",
+        className,
+      )}
+    >
       {role === "customer" && (
-        <div>
+        <div className={"self-center md:self-start"}>
           <p
             className={cn("font-bold text-[40px]", inter.variable)}
             style={{ lineHeight: "30px" }}
@@ -27,7 +32,7 @@ function Header({ role, className }: IHeader) {
 
       {!role && <div />}
 
-      <div className={"flex gap-[12px] items-center"}>
+      <div className={"flex gap-[12px] items-center self-end"}>
         <p className={"text-textGray"}>andrew@rapchat.com</p>
         <Avatar className={"h-[45px] w-[45px]"}>
           <AvatarImage src={AvatarImagee.src} />

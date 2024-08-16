@@ -13,8 +13,6 @@ interface SidebarProps {
 function SidebarTile({ title, location }: SidebarProps) {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   return (
     <Link
       href={location}
