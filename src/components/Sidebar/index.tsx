@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Logo from "@/assets/logo.png";
 import Image from "next/image";
@@ -13,7 +15,7 @@ const tabs = [
   { title: "My Jobs", location: "/my-jobs" },
   { title: "Submit New Job", location: "/new-job" },
   { title: "Approval", location: "/approval" },
-  { title: "Payments", location: "/payments" },
+  // { title: "Payments", location: "/payments" },
   { title: "Feedback & Ratings", location: "/feedback-rating" },
   { title: "Profile settings", location: "/settings" },
   { title: "Help & Support", location: "/support" },
@@ -22,7 +24,11 @@ const tabs = [
 
 function Sidebar() {
   return (
-    <div className={"w-[300px] bg-[#61616166]"}>
+    <div
+      className={
+        "fixed md:relative w-full max-w-[300px] min-h-screen bg-[#616161] md:bg-[#61616166] z-10"
+      }
+    >
       <div className={"mt-[50px] flex flex-col items-center mb-[15px]"}>
         <Image src={Logo} alt={"logo"} width={111} height={49} />
         <p
@@ -37,7 +43,7 @@ function Sidebar() {
       </div>
 
       <Input
-        className={"border-none bg-[#616161CC] mx-[24px] mb-[20px]"}
+        className={"md:border-none bg-[#616161CC] mx-[24px] mb-[20px]"}
         placeholder={"Search job"}
         rightIcon={<SearchIcon />}
       />
