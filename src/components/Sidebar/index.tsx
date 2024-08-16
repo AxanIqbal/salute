@@ -8,7 +8,7 @@ import { inter } from "@/utils/fonts";
 import { Input } from "@/components/ui/input";
 import SearchIcon from "@/assets/search.svg";
 import SidebarTile from "@/components/Sidebar/Tile";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const tabs = [
   { title: "dashboard", location: "/dashboard" },
@@ -23,6 +23,8 @@ const tabs = [
 ];
 
 function Sidebar() {
+  const router = useRouter();
+
   return (
     <div
       className={
@@ -52,13 +54,16 @@ function Sidebar() {
         {tabs.map((e) => (
           <SidebarTile key={e.location} title={e.title} location={e.location} />
         ))}
-        <Link
+        <p
           className={"pl-[40px] py-[12px] w-full block cursor-pointer"}
-          href={"/login"}
-          replace
+          onClick={() => {
+            document.cookie =
+              "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            router.replace("/login");
+          }}
         >
           Log out
-        </Link>
+        </p>
       </div>
     </div>
   );

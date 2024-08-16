@@ -1,3 +1,12 @@
+import { redirect } from "next/navigation";
+import { getServerUser } from "@/utils/user";
+
 export default function Home() {
-  return <main></main>;
+  const user = getServerUser();
+
+  if (user) {
+    redirect("/dashboard");
+  } else {
+    redirect("/login");
+  }
 }

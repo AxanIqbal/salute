@@ -3,12 +3,20 @@ import Image from "next/image";
 import Logo from "@/assets/logo.png";
 import { cn } from "@/lib/utils";
 import { inter } from "@/utils/fonts";
+import { getServerUser } from "@/utils/user";
+import { redirect } from "next/navigation";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 function AuthLayout({ children }: LayoutProps) {
+  const user = getServerUser();
+
+  if (user) {
+    redirect("/dashboard");
+  }
+
   return (
     <main className={"flex justify-center items-center min-h-screen flex-col"}>
       <div

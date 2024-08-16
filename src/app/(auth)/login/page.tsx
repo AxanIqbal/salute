@@ -1,9 +1,19 @@
-import React from "react";
+"use client";
+
+import React, { useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import PhoneIcon from "@/assets/phone.svg";
+import { useRouter } from "next/navigation";
 
 function Login() {
+  const router = useRouter();
+
+  const onContinue = useCallback(() => {
+    document.cookie = `user=${JSON.stringify({})}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=Lax;`;
+    router.replace("/dashboard");
+  }, [router]);
+
   return (
     <div className={""}>
       <p className={"font-[700] text-[38px]"}>Welcome</p>
@@ -23,7 +33,9 @@ function Login() {
         />
       </div>
 
-      <Button className={"w-full text-[16px] py-[17px]"}>Continue</Button>
+      <Button className={"w-full text-[16px] py-[17px]"} onClick={onContinue}>
+        Continue
+      </Button>
     </div>
   );
 }
