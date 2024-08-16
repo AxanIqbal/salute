@@ -33,7 +33,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         )}
       >
         {icon}
-        <div>
+        <div className={"flex-1"}>
           {label && <p className={"text-textGray text-[14px]"}>{label}</p>}
           <input
             type={type}

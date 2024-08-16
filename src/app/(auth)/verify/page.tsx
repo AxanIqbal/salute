@@ -1,6 +1,6 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
-import MailIcon from "@/assets/mail.svg";
+import MailIcon from "@/assets/svg/mail.svg";
 import { Button } from "@/components/ui/button";
 
 function Verification() {

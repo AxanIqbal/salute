@@ -3,7 +3,7 @@
 import React, { useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import PhoneIcon from "@/assets/phone.svg";
+import PhoneIcon from "@/assets/svg/phone.svg";
 import { useRouter } from "next/navigation";
 
 function Login() {

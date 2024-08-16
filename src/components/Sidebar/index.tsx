@@ -6,7 +6,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { inter } from "@/utils/fonts";
 import { Input } from "@/components/ui/input";
-import SearchIcon from "@/assets/search.svg";
+import SearchIcon from "@/assets/svg/search.svg";
 import SidebarTile from "@/components/Sidebar/Tile";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";

@@ -1,6 +1,6 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
-import LockIcon from "@/assets/lock.svg";
+import LockIcon from "@/assets/svg/lock.svg";
 import { Button } from "@/components/ui/button";
 
 function ResetPassword() {
