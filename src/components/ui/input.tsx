@@ -20,11 +20,37 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       label,
       inputClassName,
       rightIcon,
-      labelType = "outer",
+      labelType = "inner",
       ...props
     },
     ref,
   ) => {
+    if (labelType === "outer") {
+      return (
+        <div>
+          {label && (
+            <p className={"text-textGray text-[14px] mb-[6px]"}>{label}</p>
+          )}
+          <div
+            className={cn(
+              "flex rounded-[10px] border border-input px-[12px] py-[10px]",
+              className,
+            )}
+          >
+            <input
+              type={type}
+              className={cn(
+                "flex h-auto w-full bg-transparent text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+                inputClassName,
+              )}
+              ref={ref}
+              {...props}
+            />
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div
         className={cn(
