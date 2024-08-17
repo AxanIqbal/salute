@@ -29,7 +29,7 @@ function VisitsChart() {
       }
     >
       <p className={"font-bold text-[20px] mb-[8px]"}>Frequency of visits</p>
-      <ChartContainer config={chartConfig} className={"h-full"}>
+      <ChartContainer config={chartConfig} className={"h-full min-h-[200px]"}>
         <LineChart accessibilityLayer data={chartData}>
           <XAxis
             dataKey="month"
