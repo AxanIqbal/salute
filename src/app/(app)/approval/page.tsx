@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { inter } from "@/utils/fonts";
 import Slider from "@/components/ui/slider";
 import ApprovedTable from "@/components/Approval/approved";
+import Pending from "@/components/Approval/pending";
+import Canceled from "@/components/Approval/cancel";
 
 const op = [
   { value: "approve", label: "Approved" },
@@ -37,6 +39,8 @@ function ApprovalPage() {
       />
 
       {slide === "approve" && <ApprovedTable />}
+      {slide === "pending" && <Pending />}
+      {slide === "cancelled" && <Canceled />}
     </div>
   );
 }

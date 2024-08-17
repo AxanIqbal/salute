@@ -1,7 +1,7 @@
 import React from "react";
 import { Table, TableCell, TableRow, THead } from "@/components/ui/table";
 
-function ApprovedTable() {
+function Canceled() {
   return (
     <Table>
       <thead className={"shadow"}>
@@ -19,17 +19,7 @@ function ApprovedTable() {
           <TableCell>XYZ</TableCell>
           <TableCell>Denting</TableCell>
           <TableCell>Rs.5500</TableCell>
-          <TableCell>
-            <div className={"flex"}>
-              <p
-                className={
-                  "font-medium px-[7px] py-[6px] bg-green rounded-[5px] text-[12px]"
-                }
-              >
-                Approved
-              </p>
-            </div>
-          </TableCell>
+          <TableCell>Cancelled</TableCell>
         </TableRow>
 
         <TableRow>
@@ -37,21 +27,11 @@ function ApprovedTable() {
           <TableCell>XYZ</TableCell>
           <TableCell>Denting</TableCell>
           <TableCell>Rs.5500</TableCell>
-          <TableCell>
-            <div className={"flex"}>
-              <p
-                className={
-                  "font-medium px-[7px] py-[6px] bg-green rounded-[5px] text-[12px]"
-                }
-              >
-                Approved
-              </p>
-            </div>
-          </TableCell>
+          <TableCell>Cancelled</TableCell>
         </TableRow>
       </tbody>
     </Table>
   );
 }
 
-export default ApprovedTable;
+export default Canceled;
