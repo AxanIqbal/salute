@@ -7,15 +7,22 @@ interface ISlider<T extends string | number> {
   options: { label: string; value: T }[];
   value: T;
   onChange: (value: T) => void;
+  className?: string;
 }
 
 function Slider<T extends string | number>({
   options,
   value,
   onChange,
+  className,
 }: ISlider<T>) {
   return (
-    <div className={"bg-[#656966] flex rounded-[10px] overflow-x-auto "}>
+    <div
+      className={cn(
+        "bg-[#656966] flex rounded-[10px] overflow-x-auto",
+        className,
+      )}
+    >
       {options.map((e) => (
         <p
           className={cn(

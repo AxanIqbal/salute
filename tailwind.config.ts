@@ -27,6 +27,7 @@ const config = {
         red: "#B41515",
         textRed: "#EF5050",
         textGray: "#A8A8A8",
+        green: "#007905",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

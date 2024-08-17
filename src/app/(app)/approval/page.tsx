@@ -5,9 +5,18 @@ import Header from "@/components/Header";
 import { cn } from "@/lib/utils";
 import { inter } from "@/utils/fonts";
 import Slider from "@/components/ui/slider";
+import ApprovedTable from "@/components/Approval/approved";
+
+const op = [
+  { value: "approve", label: "Approved" },
+  { value: "pending", label: "Pending" },
+  { value: "cancelled", label: "Cancelled" },
+] as const;
+
+type valuesT = (typeof op)[number]["value"];
 
 function ApprovalPage() {
-  const [slide, setSlide] = useState("approve");
+  const [slide, setSlide] = useState<valuesT>("approve");
 
   return (
     <div className={"w-full"}>
@@ -17,6 +26,7 @@ function ApprovalPage() {
       </p>
 
       <Slider
+        className={"mb-[20px]"}
         options={[
           { value: "approve", label: "Approved" },
           { value: "pending", label: "Pending" },
@@ -25,6 +35,8 @@ function ApprovalPage() {
         onChange={setSlide}
         value={slide}
       />
+
+      {slide === "approve" && <ApprovedTable />}
     </div>
   );
 }
