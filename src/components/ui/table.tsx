@@ -1,18 +1,22 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 export function Table({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"table">) {
   return (
-    <table
-      className={cn(
-        "table-auto overflow-x-auto border-separate border-spacing-y-1 w-full",
-        className,
-      )}
-      {...props}
-    />
+    <ScrollArea>
+      <table
+        className={cn(
+          "table-auto border-separate border-spacing-y-1 w-full",
+          className,
+        )}
+        {...props}
+      />
+      <ScrollBar orientation="horizontal" />
+    </ScrollArea>
   );
 }
 

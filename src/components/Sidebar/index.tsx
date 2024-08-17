@@ -31,7 +31,7 @@ function Sidebar() {
   return (
     <>
       <Button
-        className={"fixed top-4 left-4 z-20 md:hidden"}
+        className={"fixed top-4 left-4 z-20 lg:hidden"}
         size={"icon"}
         onClick={() => setIsNav((prevState) => !prevState)}
       >
@@ -39,7 +39,7 @@ function Sidebar() {
       </Button>
       <div
         className={cn(
-          "fixed md:sticky w-full max-w-[300px] min-h-screen bg-[#616161] md:bg-[#61616166] z-10 transition-all duration-500",
+          "fixed lg:sticky w-[300px] min-w-[300px] max-w-[300px] min-h-screen bg-[#616161] lg:bg-[#61616166] z-10 transition-all duration-500",
           isNav ? "left-0" : "-left-full",
         )}
       >
@@ -57,7 +57,7 @@ function Sidebar() {
         </div>
 
         <Input
-          className={"md:border-none bg-[#616161CC] mx-[24px] mb-[20px]"}
+          className={"lg:border-none bg-[#616161CC] mx-[24px] mb-[20px]"}
           placeholder={"Search job"}
           rightIcon={<SearchIcon />}
         />

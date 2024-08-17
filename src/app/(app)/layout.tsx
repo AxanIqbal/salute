@@ -17,7 +17,7 @@ function AppLayout({ children }: AppLayoutProps) {
   return (
     <main className={"flex min-h-screen"}>
       <Sidebar />
-      <div className={"mx-[18px] md:mx-[30px] my-[50px] w-full"}>
+      <div className={"px-[18px] md:px-[30px] my-[50px] w-full"}>
         {children}
       </div>
     </main>
