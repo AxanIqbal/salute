@@ -5,6 +5,15 @@ import { inter } from "@/utils/fonts";
 import { Table, TableCell, TableRow, THead } from "@/components/ui/table";
 import { cva } from "class-variance-authority";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 
 const paymentVariant = cva(
   "h-[28px] w-[65px] text-center rounded-[5px] text-[12px] font-medium flex items-center justify-center",
@@ -91,14 +100,38 @@ function MyJobs() {
                   Approved
                 </Button>
 
-                <Button
-                  variant={"info"}
-                  className={
-                    "h-[28px] w-[100px] rounded-[5px] text-[12px] font-medium"
-                  }
-                >
-                  Track progress
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      variant={"info"}
+                      className={
+                        "h-[28px] w-[100px] rounded-[5px] text-[12px] font-medium"
+                      }
+                    >
+                      Track progress
+                    </Button>
+                  </DialogTrigger>
+
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle className={"font-medium text-[20px]"}>
+                        Track progress
+                      </DialogTitle>
+                    </DialogHeader>
+
+                    <div>
+                      <Input placeholder={"Enter your vehicle number"} />
+                    </div>
+
+                    <DialogFooter>
+                      <Button
+                        className={"font-normal text-[12px] rounded-[5px]"}
+                      >
+                        Continue
+                      </Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
               </div>
             </TableCell>
           </TableRow>
