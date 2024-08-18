@@ -83,13 +83,13 @@ function NewJob() {
           />
         </div>
 
-        <div>
+        <div className={"flex-[2]"}>
           <div
             className={
               "flex gap-[20px] flex-col lg:flex-row mb-[20px] justify-stretch flex-1"
             }
           >
-            <div>
+            <div className={"flex-1"}>
               <div className={"flex gap-[6px] items-center mb-[8px]"}>
                 <p className={"text-[#FFFFFFCC]"}>IMAGES</p>
                 <div
