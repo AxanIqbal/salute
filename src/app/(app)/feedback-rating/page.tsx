@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Rating from "@/components/ui/rating";
+import UploadImage from "@/components/ui/upload-image";
 
 function Feedback() {
   return (
@@ -61,6 +62,26 @@ function Feedback() {
               <div>
                 <p className={"text-center font-bold text-[20px]"}>Staff</p>
                 <Rating iconProps={{ width: 30, height: 30 }} />
+              </div>
+            </div>
+
+            <div>
+              <p className={"py-[10px] font-bold text-[12px] text-[#FFFFFFCC]"}>
+                UPLOAD IMAGES
+              </p>
+              <div
+                className={
+                  "border border-white rounded-[10px] p-[6px] flex flex-wrap w-full gap-[5px] items-center justify-center"
+                }
+              >
+                <UploadImage className={"w-full md:w-[24%]"} />
+                <UploadImage className={"w-full md:w-[24%]"} />
+                <UploadImage className={"w-full md:w-[24%]"} />
+                <UploadImage className={"w-full md:w-[24%]"} />
+                <UploadImage className={"w-full md:w-[24%]"} />
+                <UploadImage className={"w-full md:w-[24%]"} />
+                <UploadImage className={"w-full md:w-[24%]"} />
+                <UploadImage className={"w-full md:w-[24%]"} />
               </div>
             </div>
           </div>
