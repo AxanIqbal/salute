@@ -181,7 +181,11 @@ function NewJob() {
 
       <Step count={4} title={"Contact Details"} />
 
-      <div className={"mt-[12px] flex gap-[12px] md:px-[60px]"}>
+      <div
+        className={
+          "mt-[12px] flex flex-col md:flex-row gap-[12px] md:px-[60px]"
+        }
+      >
         <div className={"flex flex-col gap-[10px] flex-1"}>
           <Input
             labelType={"outer"}
