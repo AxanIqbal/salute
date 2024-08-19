@@ -28,7 +28,7 @@ function NotificationTile({
         <p className={"text-[#FFFFFFCC] text-[16px]"}>{description}</p>
       </div>
 
-      <div className={"flex gap-[8px]"}>
+      <div className={"flex gap-[8px] items-center"}>
         {!isRead && (
           <Button className={"w-[65px] h-[28px] rounded-[5px] text-[12px]"}>
             View
