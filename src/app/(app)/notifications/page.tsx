@@ -27,6 +27,7 @@ function NotificationPage() {
         <NotificationTile
           title={"You have received quotation"}
           description={"You have received quotation for Vehicle number 456754"}
+          isBorder
         />
         <NotificationTile
           title={"A great opportunity for you"}

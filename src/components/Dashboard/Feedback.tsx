@@ -16,7 +16,7 @@ function Feedback() {
         <Rating initialRating={5} readonly className={"mb-[20px]"} />
 
         <p className={"text-[16px] font-medium text-[#FFFFFFCC]"}>Staff</p>
-        <Rating initialRating={4} readonly className={"mb-[20px]"} />
+        <Rating initialRating={5} readonly className={"mb-[20px]"} />
       </div>
     </div>
   );

@@ -15,23 +15,23 @@ const chartData = [
 const chartConfig: Record<string, { label: string; color: string }> = {
   chrome: {
     label: "Denting",
-    color: "hsl(var(--chart-1))",
+    color: "#39A175",
   },
   safari: {
     label: "Painting",
-    color: "hsl(var(--chart-2))",
+    color: "#9223AD",
   },
   firefox: {
     label: "Mechanical",
-    color: "hsl(var(--chart-3))",
+    color: "#ADB00E",
   },
   edge: {
     label: "Electrician",
-    color: "hsl(var(--chart-4))",
+    color: "#D85C5C",
   },
   other: {
     label: "Inspection",
-    color: "hsl(var(--chart-5))",
+    color: "#429BCE",
   },
 } satisfies ChartConfig;
 
@@ -61,21 +61,23 @@ function Services() {
         <tbody>
           {chartData.map((e) => (
             <tr key={e.browser}>
-              <td>
-                <div
-                  className={"h-[6px] w-[6px] rounded-full"}
-                  style={{ backgroundColor: chartConfig[e.browser].color }}
-                />
-              </td>
-
               <td className={"w-[80px]"}>
-                <p className={"text-[10px] font-[500]"}>
-                  {chartConfig[e.browser]?.label}
-                </p>
+                <div className={"flex gap-[5px] items-center"}>
+                  <div
+                    className={"h-[6px] w-[6px] rounded-full"}
+                    style={{ backgroundColor: chartConfig[e.browser].color }}
+                  />
+
+                  <p className={"text-[10px] font-medium text-[#FFFFFFCC]"}>
+                    {chartConfig[e.browser]?.label}
+                  </p>
+                </div>
               </td>
 
               <td>
-                <p className={"text-[10px] font-[500]"}>{e.visitors}%</p>
+                <p className={"text-[10px] font-medium text-[#FFFFFFCC]"}>
+                  {e.visitors}%
+                </p>
               </td>
             </tr>
           ))}

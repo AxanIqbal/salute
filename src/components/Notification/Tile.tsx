@@ -6,14 +6,21 @@ interface INotificationTile {
   title: string;
   description: string;
   isRead?: boolean;
+  isBorder?: boolean;
 }
 
-function NotificationTile({ title, description, isRead }: INotificationTile) {
+function NotificationTile({
+  title,
+  description,
+  isRead,
+  isBorder,
+}: INotificationTile) {
   return (
     <div
       className={cn(
-        "px-[15px] py-[17px] flex justify-between",
+        "px-[15px] py-[17px] flex justify-between items-center",
         isRead ? "bg-[#61616166]" : "bg-[#FFFFFF33]",
+        isBorder ? "border-l-[2px] border-red" : undefined,
       )}
     >
       <div>
@@ -27,6 +34,8 @@ function NotificationTile({ title, description, isRead }: INotificationTile) {
             View
           </Button>
         )}
+
+        {isRead && <p>23 Apr 2022</p>}
         <Button
           className={"w-[65px] h-[28px] rounded-[5px] text-[12px]"}
           variant={"destructive"}

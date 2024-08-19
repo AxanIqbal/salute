@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 
 const paymentVariant = cva(
-  "h-[28px] w-[65px] text-center rounded-[5px] text-[12px] font-medium flex items-center justify-center",
+  "h-[28px] w-[65px] text-center rounded-[5px] text-[12px] font-medium flex items-center justify-center mx-auto",
   {
     variants: {
       variant: {
@@ -31,7 +31,7 @@ const paymentVariant = cva(
 );
 
 const statusVariant = cva(
-  "h-[28px] w-[80px] text-center rounded-[5px] text-[12px] font-medium flex items-center justify-center",
+  "h-[28px] w-[80px] text-center rounded-[5px] text-[12px] font-medium flex items-center justify-center mx-auto",
   {
     variants: {
       variant: {
@@ -82,7 +82,7 @@ function MyJobs() {
               </p>
             </TableCell>
             <TableCell>
-              <div className={"flex items-center gap-[8px]"}>
+              <div className={"flex items-center gap-[8px] justify-center"}>
                 <Button
                   className={
                     "w-[65px] h-[28px] rounded-[5px] text-[12px] font-medium"
@@ -149,7 +149,7 @@ function MyJobs() {
             </TableCell>
 
             <TableCell>
-              <div className={"flex items-center gap-[8px]"}>
+              <div className={"flex items-center gap-[8px] justify-center"}>
                 <Button
                   className={
                     "w-[65px] h-[28px] rounded-[5px] text-[12px] font-medium"
@@ -186,7 +186,7 @@ function MyJobs() {
               </p>
             </TableCell>
             <TableCell>
-              <div className={"flex items-center gap-[8px]"}>
+              <div className={"flex items-center gap-[8px] justify-center"}>
                 <Button
                   className={
                     "w-[65px] h-[28px] rounded-[5px] text-[12px] font-medium"

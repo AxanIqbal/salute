@@ -46,7 +46,7 @@ function Login() {
         setPhone(formData.get("phone") as string);
       }}
     >
-      <p className={"font-[700] text-[38px]"}>Welcome</p>
+      <p className={"font-bold text-[38px]"}>Welcome!</p>
       <p className={"text-[22px] text-textGray mb-[50px]"}>
         Hello there! login to get started
       </p>

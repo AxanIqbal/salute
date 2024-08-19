@@ -27,7 +27,7 @@ export function THead({
   return (
     <th
       className={cn(
-        "p-[16px] text-start bg-[#616161CC] font-medium text-[16px] text-nowrap",
+        "p-[16px] text-start bg-[#616161CC] font-medium text-[16px] text-nowrap text-center",
         className,
       )}
       {...props}
@@ -39,7 +39,12 @@ export function TableCell({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"td">) {
-  return <td className={cn("p-[16px] text-nowrap")} {...props} />;
+  return (
+    <td
+      className={cn("p-[16px] text-nowrap text-center text-[14px]", className)}
+      {...props}
+    />
+  );
 }
 
 export function TableRow({

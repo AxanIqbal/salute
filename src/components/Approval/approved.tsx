@@ -23,7 +23,7 @@ function ApprovedTable() {
             <div className={"flex"}>
               <p
                 className={
-                  "font-medium px-[7px] py-[6px] bg-green rounded-[5px] text-[12px]"
+                  "font-medium px-[7px] py-[6px] bg-green rounded-[5px] text-[12px] mx-auto"
                 }
               >
                 Approved
@@ -41,7 +41,7 @@ function ApprovedTable() {
             <div className={"flex"}>
               <p
                 className={
-                  "font-medium px-[7px] py-[6px] bg-green rounded-[5px] text-[12px]"
+                  "font-medium px-[7px] py-[6px] bg-green rounded-[5px] text-[12px] mx-auto"
                 }
               >
                 Approved

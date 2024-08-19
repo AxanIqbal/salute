@@ -5,8 +5,8 @@ import { Line, LineChart, XAxis, YAxis } from "recharts";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  visit: {
+    label: "Visits",
     color: "var(--red)",
   },
   // mobile: {
@@ -16,10 +16,37 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 const chartData = [
-  { month: "April 2024", desktop: 73 },
-  { month: "May 2024", desktop: 109 },
-  { month: "June 2024", desktop: 214 },
+  { month: "April 2024", visit: 0 },
+  { month: "May 2024", visit: 2 },
+  { month: "June 2024", visit: 1 },
+  { month: "July 2024", visit: 3 },
 ];
+
+const AxisLabel = ({
+  axisType = "yAxis",
+  x = 10,
+  y = 10,
+  width = 37,
+  height = 18,
+}: any) => {
+  const isVert = axisType === "yAxis";
+  const cx = isVert ? x : x + width / 2;
+  const cy = isVert ? height / 2 + y : y + height + 10;
+  const rot = isVert ? `270 ${cx} ${cy}` : 0;
+  return (
+    <text
+      x={cx}
+      y={cy}
+      transform={`rotate(${rot})`}
+      textAnchor="middle"
+      // stroke={"stroke"}
+      className={"font-medium text-[14px]"}
+      fill={"#FFFFFFCC"}
+    >
+      Visits
+    </text>
+  );
+};
 
 function VisitsChart() {
   return (
@@ -28,7 +55,7 @@ function VisitsChart() {
         "p-[18px] bg-[#616161CC] rounded-[10px] flex-1 min-w-[340px] flex flex-col justify-between"
       }
     >
-      <p className={"font-bold text-[20px] mb-[8px]"}>Frequency of visits</p>
+      <p className={"font-bold text-[20px] mb-[30px]"}>Frequency of visits</p>
       <ChartContainer config={chartConfig} className={"h-full min-h-[200px]"}>
         <LineChart accessibilityLayer data={chartData}>
           <XAxis
@@ -37,15 +64,20 @@ function VisitsChart() {
             axisLine={false}
             tickMargin={8}
           />
-          <YAxis tickMargin={4} stroke={"none"} />
+          <YAxis
+            tickMargin={25}
+            stroke={"none"}
+            allowDecimals={false}
+            label={<AxisLabel />}
+          />
 
           <Line
-            dataKey="desktop"
+            dataKey="visit"
             type="natural"
-            stroke="var(--color-desktop)"
+            stroke="var(--red)"
             strokeWidth={2}
             dot={{
-              fill: "var(--color-desktop)",
+              fill: "var(--red)",
               strokeWidth: 6,
             }}
             activeDot={{
