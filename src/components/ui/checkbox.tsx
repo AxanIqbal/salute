@@ -22,7 +22,7 @@ const Checkbox = React.forwardRef<
     <CheckboxPrimitive.Indicator
       className={cn("flex items-center justify-center text-current")}
     >
-      <Image width={12} height={12} src={CheckImage} alt={""} />
+      <Image width={14} height={14} src={CheckImage} alt={""} />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ));

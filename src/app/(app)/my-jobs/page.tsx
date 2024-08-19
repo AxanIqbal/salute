@@ -114,7 +114,9 @@ function MyJobs() {
 
                   <DialogContent>
                     <DialogHeader>
-                      <DialogTitle className={"font-medium text-[20px]"}>
+                      <DialogTitle
+                        className={"font-medium text-[20px] text-center"}
+                      >
                         Track progress
                       </DialogTitle>
                     </DialogHeader>

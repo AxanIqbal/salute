@@ -29,7 +29,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       return (
         <div>
           {label && (
-            <p className={"text-textGray text-[14px] mb-[6px]"}>{label}</p>
+            <p className={"text-white text-[14px] mb-[6px]"}>{label}</p>
           )}
           <div
             className={cn(

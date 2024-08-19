@@ -37,14 +37,14 @@ function NewJob() {
           <Input
             labelType={"outer"}
             label={"VEHICLE YEAR"}
-            className={"w-[87px]"}
+            className={"w-[87px] rounded-[16px]"}
             placeholder={"2015"}
           />
 
           <div>
-            <p className={"text-textGray text-[14px] mb-[6px]"}>VEHICLE MAKE</p>
+            <p className={"text-white text-[14px] mb-[6px]"}>VEHICLE MAKE</p>
             <Select>
-              <SelectTrigger className="">
+              <SelectTrigger className="rounded-[16px]">
                 <SelectValue
                   placeholder="CHOOSE"
                   className={"placeholder:text-muted-foreground"}
@@ -62,24 +62,28 @@ function NewJob() {
             labelType={"outer"}
             label={"VEHICLE NAME"}
             placeholder={"VEHICLE NAME"}
+            className={"rounded-[16px]"}
           />
 
           <Input
             labelType={"outer"}
             label={"VEHICLE NUMBER"}
             placeholder={"VEHICLE NUMBER"}
+            className={"rounded-[16px]"}
           />
 
           <Input
             labelType={"outer"}
             label={"VEHICLE MILEAGE"}
             placeholder={"VEHICLE MILEAGE"}
+            className={"rounded-[16px]"}
           />
 
           <Input
             labelType={"outer"}
             label={"VEHICLE PART"}
             placeholder={"VEHICLE PART"}
+            className={"rounded-[16px]"}
           />
         </div>
 
@@ -191,6 +195,7 @@ function NewJob() {
             labelType={"outer"}
             label={"ENTER YOUR NAME"}
             placeholder={"ENTER YOUR NAME"}
+            className={"rounded-[16px]"}
           />
 
           <Input
@@ -198,6 +203,7 @@ function NewJob() {
             labelType={"outer"}
             label={"ENTER YOUR PHONE NUMBER"}
             placeholder={"ENTER YOUR PHONE NUMBER"}
+            className={"rounded-[16px]"}
           />
 
           <Input
@@ -205,6 +211,7 @@ function NewJob() {
             labelType={"outer"}
             label={"EMAIL ADDRESS"}
             placeholder={"EMAIL ADDRESS"}
+            className={"rounded-[16px]"}
           />
 
           <Input
@@ -212,6 +219,7 @@ function NewJob() {
             labelType={"outer"}
             label={"SUBMISSION DATE"}
             placeholder={"SUBMISSION DATE"}
+            className={"rounded-[16px]"}
           />
         </div>
 

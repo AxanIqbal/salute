@@ -11,7 +11,7 @@ import UploadImage from "@/components/ui/upload-image";
 function Feedback() {
   return (
     <div className={"w-full"}>
-      <Header className={"mb-[30px]"} />
+      <Header className={"mb-[30px]"} isBell />
       <p className={cn("font-bold text-[32px] mb-[20px]", inter.variable)}>
         Customer Feedback
       </p>
@@ -32,12 +32,18 @@ function Feedback() {
           }
         >
           <div className={"flex flex-col gap-[10px] flex-1 lg:max-w-[300px]"}>
-            <Input label={"NAME"} placeholder={"NAME"} labelType={"outer"} />
+            <Input
+              label={"NAME"}
+              placeholder={"NAME"}
+              labelType={"outer"}
+              className={"rounded-[16px]"}
+            />
             <Input
               type={"email"}
               label={"EMAIL"}
               placeholder={"CUSTOMER EMAIL"}
               labelType={"outer"}
+              className={"rounded-[16px]"}
             />
             <Textarea label={"COMMENT"} placeholder={"TYPE MESSAGE HERE"} />
             <Textarea label={"SUGGESTIONS"} placeholder={"TYPE MESSAGE HERE"} />
