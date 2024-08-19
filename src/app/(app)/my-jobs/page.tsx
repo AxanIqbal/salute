@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Header from "@/components/Header";
 import { cn } from "@/lib/utils";
@@ -14,6 +16,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import { useRouter } from "next/navigation";
 
 const paymentVariant = cva(
   "h-[28px] w-[65px] text-center rounded-[5px] text-[12px] font-medium flex items-center justify-center mx-auto",
@@ -47,6 +50,8 @@ const statusVariant = cva(
 );
 
 function MyJobs() {
+  const router = useRouter();
+
   return (
     <div className={"w-full"}>
       <Header className={"mb-[30px]"} />
@@ -128,6 +133,7 @@ function MyJobs() {
                     <DialogFooter>
                       <Button
                         className={"font-normal text-[12px] rounded-[5px]"}
+                        onClick={() => router.push("/track-progress")}
                       >
                         Continue
                       </Button>
