@@ -1,6 +1,7 @@
 import React from "react";
 import { Table, TableCell, TableRow, THead } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 function Pending() {
   return (
@@ -22,11 +23,13 @@ function Pending() {
           <TableCell>Rs.5500</TableCell>
           <TableCell>
             <div className={"flex gap-[8px] items-center justify-center"}>
-              <Button
-                className={"font-medium text-[12px] h-[28px] rounded-[5px]"}
-              >
-                View
-              </Button>
+              <Link href={"/approval/1"}>
+                <Button
+                  className={"font-medium text-[12px] h-[28px] rounded-[5px]"}
+                >
+                  View
+                </Button>
+              </Link>
               <Button
                 variant={"destructive"}
                 className={"font-medium text-[12px] h-[28px] rounded-[5px]"}
