@@ -42,7 +42,7 @@ function Header({ role, className, isBell }: IHeader) {
         <div className={"flex gap-[12px] items-center"}>
           <p className={"text-textGray"}>andrew@rapchat.com</p>
           <Avatar className={"h-[45px] w-[45px]"}>
-            <AvatarImage src={AvatarImagee.src} />
+            <AvatarImage className={"object-cover"} src={AvatarImagee.src} />
           </Avatar>
         </div>
       </div>
