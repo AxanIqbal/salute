@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import { Progress } from "@/components/ui/progress";
 import BackButton from "@/components/ui/back-button";
+import { Indicator } from "@/components/Track/Timeline";
 
 function Tile({ title, value }: { title: string; value: string }) {
   return (
@@ -54,6 +55,59 @@ function TrackProgress() {
           <p className={"font-medium text-[16px] mb-[20px]"}>
             Estimated completion: 15 July 2024
           </p>
+
+          <div>
+            <div
+              className={
+                "flex gap-[6px] pb-[50px] relative overflow-hidden pt-[2px]"
+              }
+            >
+              <Indicator />
+              <div>
+                <p className={"font-medium text-[12px] leading-[15px]"}>
+                  New parts arrived
+                </p>
+                <p className={"font-medium text-[10px]"}>10 July, 2024</p>
+              </div>
+            </div>
+
+            <div
+              className={
+                "flex gap-[6px] pb-[50px] relative overflow-hidden pt-[2px]"
+              }
+            >
+              <Indicator />
+              <div>
+                <p className={"font-medium text-[12px] leading-[15px]"}>
+                  Installation
+                </p>
+                <p className={"font-medium text-[10px]"}>In progress</p>
+              </div>
+            </div>
+
+            <div
+              className={
+                "flex gap-[6px] pb-[50px] relative overflow-hidden pt-[2px]"
+              }
+            >
+              <Indicator variant={"outline"} />
+              <div>
+                <p className={"font-medium text-[12px] leading-[15px]"}>
+                  Final inspection
+                </p>
+                <p className={"font-medium text-[10px]"}>In progress</p>
+              </div>
+            </div>
+
+            <div className={"flex gap-[6px] relative overflow-hidden pt-[2px]"}>
+              <Indicator variant={"outline"} className={"after:hidden"} />
+              <div>
+                <p className={"font-medium text-[12px] leading-[15px]"}>
+                  Ready for pickup
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
