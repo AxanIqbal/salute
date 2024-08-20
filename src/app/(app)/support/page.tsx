@@ -8,6 +8,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Input } from "@/components/ui/input";
+import SearchIcon from "@/assets/svg/search.svg";
 
 function SupportPage() {
   return (
@@ -27,6 +29,14 @@ function SupportPage() {
         accumsan vulputate varius. Aenean bibendum duis quam cras elementum
         turpis vulputate vel.
       </p>
+
+      <Input
+        className={
+          "max-w-[500px] bg-[#616161CC] border-none h-[50px] my-[30px] rounded-[10px]"
+        }
+        placeholder={"Search help"}
+        rightIcon={<SearchIcon />}
+      />
 
       <p className={"font-bold text-[32px] mt-[30px]"}>FAQ’s</p>
 
