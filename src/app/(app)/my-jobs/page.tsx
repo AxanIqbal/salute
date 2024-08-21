@@ -89,14 +89,6 @@ function MyJobs() {
             <TableCell>
               <div className={"flex items-center gap-[8px] justify-center"}>
                 <Button
-                  className={
-                    "w-[65px] h-[28px] rounded-[5px] text-[12px] font-medium"
-                  }
-                >
-                  View
-                </Button>
-
-                <Button
                   variant={"success"}
                   className={
                     "h-[28px] w-[70px] rounded-[5px] text-[12px] font-medium"
@@ -159,14 +151,6 @@ function MyJobs() {
             <TableCell>
               <div className={"flex items-center gap-[8px] justify-center"}>
                 <Button
-                  className={
-                    "w-[65px] h-[28px] rounded-[5px] text-[12px] font-medium"
-                  }
-                >
-                  View
-                </Button>
-
-                <Button
                   variant={"success"}
                   className={
                     "h-[28px] w-[70px] rounded-[5px] text-[12px] font-medium"
@@ -195,14 +179,6 @@ function MyJobs() {
             </TableCell>
             <TableCell>
               <div className={"flex items-center gap-[8px] justify-center"}>
-                <Button
-                  className={
-                    "w-[65px] h-[28px] rounded-[5px] text-[12px] font-medium"
-                  }
-                >
-                  View
-                </Button>
-
                 <div className={"w-[70px] text-center"}>------</div>
 
                 <div className={"w-[100px] text-center"}>------</div>
