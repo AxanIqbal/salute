@@ -1,7 +1,12 @@
+"use client";
+
 import React from "react";
 import { Table, TableCell, TableRow, THead } from "@/components/ui/table";
+import { useRouter } from "next/navigation";
 
 function Canceled() {
+  const router = useRouter();
+
   return (
     <Table>
       <thead className={"shadow"}>
@@ -14,7 +19,10 @@ function Canceled() {
         </tr>
       </thead>
       <tbody>
-        <TableRow>
+        <TableRow
+          className={"cursor-pointer"}
+          onClick={() => router.push("/approval/1")}
+        >
           <TableCell>23 Apr 2022</TableCell>
           <TableCell>XYZ</TableCell>
           <TableCell>Denting</TableCell>
@@ -22,7 +30,10 @@ function Canceled() {
           <TableCell>Cancelled</TableCell>
         </TableRow>
 
-        <TableRow>
+        <TableRow
+          className={"cursor-pointer"}
+          onClick={() => router.push("/approval/1")}
+        >
           <TableCell>23 Apr 2022</TableCell>
           <TableCell>XYZ</TableCell>
           <TableCell>Denting</TableCell>

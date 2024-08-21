@@ -19,31 +19,11 @@ function Login() {
     [router],
   );
 
-  if (phone) {
-    return (
-      <form action={onLogin}>
-        <p className={"font-medium text-[22px] text-[#FFFFFFB2] text-center"}>
-          Enter the 6 digit one time password to continue
-        </p>
-        <Input
-          required
-          name={"password"}
-          type={"password"}
-          label={"Enter Password"}
-          className={"rounded-[10px] mt-[30px] mb-[50px]"}
-          icon={<LockIcon />}
-        />
-        <Button className={"w-full text-[16px] py-[17px]"} type={"submit"}>
-          Login
-        </Button>
-      </form>
-    );
-  }
-
   return (
     <form
-      action={(formData) => {
-        setPhone(formData.get("phone") as string);
+      action={() => {
+        document.cookie = `user=${JSON.stringify({})}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=Lax;`;
+        router.replace("/dashboard");
       }}
     >
       <p className={"font-bold text-[38px]"}>Welcome!</p>
