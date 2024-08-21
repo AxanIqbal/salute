@@ -7,6 +7,6 @@ export default function Home() {
   if (user) {
     redirect("/dashboard");
   } else {
-    redirect("/login");
+    redirect("/signup");
   }
 }

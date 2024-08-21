@@ -11,7 +11,7 @@ function AppLayout({ children }: AppLayoutProps) {
   const user = getServerUser();
 
   if (!user) {
-    redirect("/login");
+    redirect("/signup");
   }
 
   return (
